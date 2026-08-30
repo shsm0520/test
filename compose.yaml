@@ -1,0 +1,7 @@
+services:
+  test:
+    image: reg.yangdongi.com/library/test:${IMAGE_TAG:-latest}
+    container_name: test
+    restart: unless-stopped
+    ports:
+      - "${APP_PORT:-8080}:80"
